@@ -56,7 +56,7 @@ const Signup = () => {
         <input type="password" required placeholder='enter password' className='inputbox' value={password} onChange={(e)=>setpassword(e.target.value)}/>
         <br/>
         <Link to="/login">
-          <button onClick={collectdata} type="button" className="buttonsignup">
+          <button style={{cursor:"pointer"}} onClick={collectdata} type="button" className="buttonsignup">
             sign up
           </button>
         </Link>
