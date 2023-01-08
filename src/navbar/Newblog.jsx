@@ -109,7 +109,7 @@ const Newblog = () => {
               </div>
             ))
           ) : (
-            <h3>Loading Please Wait...</h3>
+            <h3>No result found</h3>
           )}
         </div>
       </div>
