@@ -19,7 +19,7 @@ const Update = () => {
   useEffect(() => {
     console.log(params);
     getproductdet();
-  });
+  },[]);
 
   const getproductdet = async () => {
     let result = await fetch(`https://calm-red-zebra-gear.cyclic.app/product/${params.id}`);
