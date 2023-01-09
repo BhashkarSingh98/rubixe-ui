@@ -17,22 +17,22 @@ const Update = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(params);
+    const getproductdet = async () => {
+      let result = await fetch(`https://calm-red-zebra-gear.cyclic.app/product/${params.id}`);
+      result = await result.json();
+  
+      console.log(result);
+      setname(result.name);
+      setmobileno(result.mobileno);
+      setemail(result.email);
+      setstate(result.state);
+      setcity(result.city);
+      setdescription(result.description);
+    };
     getproductdet();
-  },[]);
+  },[params.id]);
 
-  const getproductdet = async () => {
-    let result = await fetch(`https://calm-red-zebra-gear.cyclic.app/product/${params.id}`);
-    result = await result.json();
-
-    console.log(result);
-    setname(result.name);
-    setmobileno(result.mobileno);
-    setemail(result.email);
-    setstate(result.state);
-    setcity(result.city);
-    setdescription(result.description);
-  };
+ 
 
   const updateproduct = async () => {
     console.log(name, mobileno, email, state, city, description);
